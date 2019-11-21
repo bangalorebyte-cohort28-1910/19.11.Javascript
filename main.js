@@ -137,7 +137,6 @@ todos.push({
 todos[2].isComplete=true
 console.log(todos)
 console.log(JSON.stringify(todos))
-*/
 
 
 //Loops
@@ -169,9 +168,208 @@ for(let todoitem of todos){
     console.log(todoitem.text)
 }
 
+const person = {
+    firstname: 'jithin',
+    secondname: 'j kumar',
+    job: 'trainer',
+    address: {
+        district: 'Kochi',
+        state: 'kerala'
+    },
+    languages: ['python', 'javscript']
+}
+
+console.log('***For in***')
+for (let obj in person){
+    console.log(`${ person[obj]}`)
+}
+ */
+
+//functions
+function add(x=1, y=10){
+    return x+y
+}
+
+// console.log(add(10,20))
+
+//Higher Order Function
+// console.error('***Higher Order functions***')
+// console.warn('***ForEach***')
+// todos.forEach(function(todo){
+//     console.log(add(10, todo.text.length))
+// })
+
+
+// error output
+// todos.forEach(function(todo){
+//     add(10, todo.text.length)
+// }) 
+
+
+/*
+function square(x){
+    return x*x
+}
+
+let num_array = [10,20,30]
+console.log(num_array)
+
+//map
+const num_squares = num_array.map(square)
+console.log(num_squares)
+
+//foreach
+const num_squares1 = num_array.forEach(square)
+console.log(num_squares1)
+
+//filter
+const completed_todos = todos.filter(function(todo){
+    return todo.isComplete == true
+})
+console.log(completed_todos)
 
 
 
+// CONDITIONALS
+let x =20
+let y =20
+let z ='20'
+if(x < y){
+    console.log(`${x} is less than ${y}`)
+} else if(x === y ) {
+    console.log(`${x} is equal to ${y}`)
+
+} else {
+    console.log(`${x} is greater than ${y}`)
+}
+
+
+//switch
+
+
+switch(color){
+    case 'red':
+        console.log('color is red');
+        break;
+    case 'blue':
+        console.log('color is blue')
+        break 
+    default:
+        console.log('no color set') 
+        break    
+}
+
+
+//Ternary operator
+let color = 'blue'
+const z = color == 'red' ? 10:20
+console.log(z)
+
+
+//Arrow Functions
+name ='jithin'
+function greet(name){
+    return `Hello ${name}`
+}
+console.log("Normal Function :",greet(name))
+
+
+const greet1 = (name)=>`Hello ${name}`
+console.log("Arrow Function : ",greet1(name))
+console.log(greet1('ashwin'))
+console.log(greet1('sanju'))
+
+const square =(x)=>x*x
+console.log(square(10))
+
+const add_nums = (x,y)=>x+y
+console.log(add_nums(10,20));
+*/
+
+// Object Oriented Programming
+// console.log(document.getElementById('heading').innerText)
+
+// name = 'jithin'
+// const greet = name => `Hello ${name}`
+// document.getElementById('heading').innerText = greet(name)
+
+// const button = document.querySelector('button');
+// console.log(button.innerText)
+
+// button.addEventListener('click', event => {
+//     event.preventDefault()
+//     document.getElementById('heading').innerHTML ="jithin";
+// });
+
+// button.addEventListener('dblclick', event => {
+//     event.preventDefault()
+//     document.getElementById('heading').innerHTML = "ashwin";
+// });
+
+// const heading = document.getElementById('heading')
+// heading.addEventListener('mouseenter',event =>{
+//     heading.style.color= 'blue'
+// })
+
+// heading.addEventListener('mouseleave', event => {
+//     heading.style.color = 'black'
+// })
+
+
+// const name_new = document.getElementById('name')
+// const button = document.getElementById('submit')
+// button.addEventListener('click', event =>{
+//     event.preventDefault()
+//     heading.innerText = `Hi ${name_new.value}`
+// })
+
+// const button = document.getElementById('submit')
+// const listNames = document.getElementById('namelist')
+// console.log(listNames)
+
+// const button = document.getElementById('submit')
+// button.addEventListener('click', event =>{
+//     event.preventDefault()
+//     li = document.createElement('li')
+//     li.innerText = name_new.value
+//     listNames.appendChild(li)
+// })
+
+
+
+
+// button.addEventListener('click', event => {
+//     event.preventDefault()
+    
+
+    
+// })
+
+// const button = document.querySelector('button');
+
+// button.addEventListener('click',event)
+
+
+//Object Oriented Programming
+
+class Person{
+    constructor(firstName, lastName, dob){
+        this.firstName = firstName
+        this.lastName = lastName
+        this.dob = new Date(dob)
+    }
+    getBirthYear() {
+        return this.dob.getUTCFullYear()
+    }
+    getAge() {
+        return new Date().getFullYear() - this.getBirthYear()
+    }
+
+}
+
+let person1 = new Person('jithin', 'kumar', '12/17/1989')
+console.log(person1.getBirthYear())
+console.log(person1.getAge())
 
 
 
